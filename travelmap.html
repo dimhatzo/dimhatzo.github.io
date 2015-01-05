@@ -1,11 +1,14 @@
 
 
 <!-- saved from url=(0028)http://www.cse.ust.hk/~dcab/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     
-    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type='text/javascript' src='https://www.google.com/jsapi'>
+    </script>
         
-        <script type='text/javascript'>
+    <script type='text/javascript'>
         google.load('visualization', '1', {'packages': ['geochart']});
         google.setOnLoadCallback(drawRegionsMap);
         
@@ -18,30 +21,24 @@
         var options = {width: 900, height: 561, colors:['green','blue']};
         chart.draw(data, options);
         };
-        </script>
+    </script>
         
-        <style type="text/css">
-        
+    <style type="text/css">
         html, body {height: 100%;margin: 0;padding: 0;}
-        
         body {color:black;text-indent:10px;font-size:20px;font-family:"Cambria", Cambria, Monospace;font-weight:bold;}
-        
         img#bg {position: fixed;top: 0;left: 0;width: 100%;height: 100%;}
         #content {position: relative;z-index: 1;}
+    </style>
         
-        </style>
+    <title>travel map</title>
         
-        <title>travel map</title>
-        
-        </head>
-        
-        
-        <body>
-        <h3>Countries I have visited</h3>
-        <div id="chart_div" style="text-align:center;">
-        </div>
-        <br>
-        counts={1:just the airport, 2:less than a week, 3:more than a week but less than a month, 4:more than a month but less than a year, 5:more than a year}<br>
-        <hr>
- 
-        </body></html>
+</head>
+<body>
+    <a href="index.html"><img src="img/logo.jpg" border="0"></a>
+    <h3>Countries I have visited</h3>
+    <div id="chart_div" style="text-align:center;"></div>
+    <br>
+    counts={1:just the airport, 2:less than a week, 3:more than a week but less than a month, 4:more than a month but less than a year, 5:more than a year}<br>
+    <hr>
+ </body>
+ </html>
