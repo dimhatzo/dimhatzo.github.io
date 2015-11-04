@@ -14,6 +14,22 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 
+	<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+        <script type='text/javascript'>
+	        google.load('visualization', '1', {'packages': ['geochart']});
+	        google.setOnLoadCallback(drawRegionsMap);
+	        
+	        function drawRegionsMap() {
+	        var data = google.visualization.arrayToDataTable([
+	        ['Country', 'Counts'],
+	        ['GR', 5], ['HK', 5], ['CH', 4],['AT', 2],['CN', 3],['DE', 3],['IT', 2],['FR', 2],['RU', 2],['TR', 1],['TH', 1],['AE',1],['JP',2]]);
+	        var options = {};
+	        var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+	        var options = {width: 900, height: 561, colors:['green','blue']};
+	        chart.draw(data, options);
+	        };
+    	</script>
+
         <style>
         .panoramas{
             width: 100%;
@@ -110,6 +126,20 @@
 
 				</div>
 				
+			</section>
+
+		<!-- Travel Map -->
+			<section id="contact" class="main style3 secondary">
+				<div class="content container">
+					<header>
+						<h2>Travel Map</h2>
+						
+						<div id="chart_div" style="text-align:center;"></div>
+    <br>
+    counts={1:just the airport, 2:less than a week, 3:more than a week but less than a month, 4:more than a month but less than a year, 5:more than a year}<br>
+						
+					</header>
+				</div>
 			</section>
 
 		<!-- Contact -->
