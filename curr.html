@@ -7,7 +7,9 @@
         po.type = "text/javascript";
         po.async = true;
         po.src = "https://hitbtc.com/get_widget?pair=btcusd";
+        var p2 = document.getElementById("hitbtc-main-value");
         var s = document.getElementsByTagName("script")[0];
+        
         s.parentNode.insertBefore(po, s);
     })();
      // You can construct widget dynamically by calling hitbtc.widget("myDiv", "big", null, "btcusd");
